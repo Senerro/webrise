@@ -18,4 +18,10 @@ public class Subscription {
     @Column(name = "ID")
     public UUID id;
 
+    @Column(name = "NAME", unique = true)
+    public String name;
+
+    @Column(name = "DESCRIPTION")
+    public String description;
+
 }

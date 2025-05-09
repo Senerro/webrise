@@ -1,9 +1,10 @@
 services:
   postgres:
     image: 'postgres:latest'
+    container_name: webrise_pdb
     environment:
       - 'POSTGRES_DB=webriseDB'
       - 'POSTGRES_PASSWORD=secret'
       - 'POSTGRES_USER=webreiseUser'
     ports:
-      - '5432'
+      - '5432:5432'
