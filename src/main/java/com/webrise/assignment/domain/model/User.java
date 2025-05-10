@@ -28,7 +28,7 @@ public class User {
     @Size(max = 60, min = 60)
     private String encryptedPassword;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "user_subscription",
             joinColumns = @JoinColumn(name = "USER_ID"),

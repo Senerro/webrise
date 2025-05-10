@@ -1,10 +1,13 @@
 package com.webrise.assignment.service;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import com.webrise.assignment.domain.dto.request.SubscriptionToUserRequestDTO;
+import com.webrise.assignment.domain.dto.response.UserSubscriptionsDTO;
 
-@Service
-@RequiredArgsConstructor
-public class SubscriptionService {
+import java.util.List;
 
+public interface SubscriptionService {
+    void testGenerate();
+    void subscribe(SubscriptionToUserRequestDTO requestDTO);
+    void unsubscribe(SubscriptionToUserRequestDTO requestDTO);
+    UserSubscriptionsDTO getUserSubscription(String userId);
 }
