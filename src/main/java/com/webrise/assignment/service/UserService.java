@@ -1,10 +1,15 @@
 package com.webrise.assignment.service;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import com.webrise.assignment.domain.dto.UserDTO;
+import com.webrise.assignment.domain.dto.request.UserCreationDTO;
+import com.webrise.assignment.domain.dto.request.UserUpdateDTO;
 
-@Service
-@RequiredArgsConstructor
-public class UserService {
+public interface UserService {
+    void create(UserCreationDTO userDTO);
 
+    UserDTO getUser(String id);
+
+    void updateUser(String id, UserUpdateDTO userUpdateDTO);
+
+    void deleteUser(String id);
 }
